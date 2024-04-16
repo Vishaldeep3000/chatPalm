@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cors())
 
 const LANGUAGE_MODEL_API_KEY = process.env.LANGUAGE_MODEL_API_KEY
-const LANGUAGE_MODEL_URL = `https://generativelanguage.googleapis.com/v1beta1/models/chat-bison-001:generateMessage?key=AIzaSyBmqmcst4Ku4i9gmQJkYxRV_5ABBKAZT3E`
+const LANGUAGE_MODEL_URL = `https://generativelanguage.googleapis.com/v1beta1/models/chat-bison-001:generateMessage?key=`
 
 app.get('/prompt/:text', async (req, res) => {
     const text = req.params.text
