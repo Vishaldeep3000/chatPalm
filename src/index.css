@@ -1,13 +1,118 @@
-body {
+/*AIzaSyA4sCYvpjeGy9T_w0lgCwiGJl6n7148Osk*/
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: rgb(277,277,277);
+  display: flex;
+  justify-content: end;
+  height: 100vh;
+  align-items: end;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2, h3{
+  margin: 5px;
+}
+
+.chat-bot{
+  display: none;
+  position: relative;
+  height: 500px;
+  width: 400px;
+  background-color: rgb(255,255,255);
+  border-radius: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
+  box-shadow: rgba(0,0,0,0.16) 0 10px 36px, rgba(0,0,0,0.06) 0 0 0 1px;
+  overflow: hidden;
+  animation: riseIn 0.5s ease forwards;
+  transition: 2000s;
+}
+
+@keyframes riseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-container{
+  height: 60px;
+  background: linear-gradient(rgb(22 61 197), rgb(6 120 92));
+  padding: 25px;
+  color: rgb(244,244,244);
+  display: flex;
+  justify-content: space-between;
+}
+
+.close_icon{
+  position: relative;
+  left: 30px;
+}
+.btn-close{
+  background-color: blue;
+  color:white;
+  font-size: 30px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+}
+
+textarea{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 60px 25px 25px;
+  border-top: 1px solid rgb(207,207,207);
+  height: 80px;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgb(6,120,84);
+  color: rgb(207, 207, 207);
+  position: absolute;
+  bottom: 21px;
+  right: 21px;
+}
+
+.bubble{
+  width: 250px;
+  padding: 20px;
+  margin: 10px 25px;
+  border-radius: 10px;
+  box-shadow: rgba(0,0,0,24) 0 3px 8px;
+  color: rgb(74,74,74);
+}
+
+.question{
+  background-color: rgb(244, 244, 244);
+}
+
+.response{
+  margin-left: 85px;
+}
+
+.chat-header{
+  position: relative;
+  z-index: 1;
+}
+
+.feed{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
 }
